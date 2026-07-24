@@ -9,13 +9,15 @@
     "dev:frontend": "npm run dev --prefix frontend",
     "dev": "concurrently -n BACKEND,FRONTEND -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
     "build:frontend": "npm run build --prefix frontend",
-    "vercel-build": "npm run build:frontend"
+    "vercel-build": "npm install --prefix frontend && npm run build:frontend"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
     "nodemailer": "^6.9.14"
   },
   "devDependencies": {
+    "vite": "^5.4.8",
+    "@vitejs/plugin-react": "^4.3.1",
     "concurrently": "^8.2.2"
   }
 }
