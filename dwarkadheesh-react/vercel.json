@@ -9,10 +9,12 @@
     {
       "source": "/api/contact",
       "destination": "/api/contact"
-    },
+    }
+  ],
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
